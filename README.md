@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+# One Piece Sagas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that allows users to explore and search through the various sagas of the popular anime and manga series, One Piece. The app fetches data from an external API and provides an interactive interface for users to search, filter, and view the list of sagas.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Search and Filter:** Search for specific sagas by title and filter the results dynamically.
+- **Data Fetching:** Fetch saga data from an external API with real-time loading indicators.
+- **Error Handling:** Display error messages if data fails to load.
+- **Reusable Components:** Structured code with reusable components like `SearchInput`, `SagaList`, and `LoadingError`.
+- **Performance Optimization:** Optimized rendering using hooks such as `useMemo` and `useCallback`.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: Frontend library for building interactive user interfaces.
+- **TypeScript**: Strongly typed JavaScript for improved code quality.
+- **Hooks**: Including `useState`, `useReducer`, `useEffect`, `useRef`, `useCallback`, and `useMemo` for state management and performance optimization.
 
-- Configure the top-level `parserOptions` property like this:
+## How to Run the Project
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clone the repository:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+   ```bash
+   git clone https://github.com/yourusername/one-piece-sagas.git
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. Install dependencies:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   ```bash
+    cd one-piece-sagas
+    npm install
+   ```
+
+3. Start the development server::
+
+   ```bash
+    npm start
+   ```
+
+4. Open your browser and visit http://localhost:3000 to see the app in action.
+
+Future Enhancements
+Add pagination for large data sets.
+Improve the UI/UX with animations and better styles.
+Implement dark mode.
