@@ -21,7 +21,7 @@ A React application that allows users to explore and search through the various 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/one-piece-sagas.git
+   git clone https://github.com/josmel/react-app-one-piece.git
    ```
 
 2. Install dependencies:
